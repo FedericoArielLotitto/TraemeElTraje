@@ -19,6 +19,8 @@ var app = new Vue({
       correoElectronico: '',
       nombre: '',
       nombreReceptor: '',
-      cantidad: 0
+      cantidad: 0,
+      home: "./index.html",
+      enlacePedidos: "./mis-pedidos.html",
     }
 });
