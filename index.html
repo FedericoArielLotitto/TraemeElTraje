@@ -14,84 +14,18 @@
 
 <body>
     <div id="app">
-        <nav class="fondo-navbar navbar navbar-expand-md">
-            <div class="container-fluid">
-                <a class="navbar-brand color-texto-navbar" :href="home">{{ brand }}</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#opcionesDePedido">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="opcionesDePedido">
-                    <div class="navbar-nav">
-                        <a class="color-texto-navbar active " aria-current="page" :href="enlacePedidos">{{ opcionUno }}</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="row">
-            <div class="col fondo">
-                <div id="card-pedido" class="card color-borde m-5 fondo-card">
-                    <div class="card-body fondo-card">
-                        <form action="POST">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <p class="fs-2 color-texto">{{ tituloUno }}</p>
-                                    <div class="my-3">
-                                        <label class="color-texto" for="nombre" class="form-label">{{ tituloNombre }}</label>
-                                        <input v-model="nombre" type="text" class="form-control" id="nombre">
-                                    </div>
-                                    <div class="my-3">
-                                        <label class="color-texto" for="apellido" class="form-label">{{ tituloApellido }}</label>
-                                        <input v-model="apellido" type="text" class="form-control" id="apellido">
-                                    </div>
-                                    <div class="my-3">
-                                        <label class="color-texto" for="telefono" class="form-label">{{ tituloTelefono }}</label>
-                                        <input v-model="telefono" type="number" class="form-control" id="telefono" pattern="^11([0-9]){8}">
-                                        <div class="color-texto">{{ mensajeDeAdvertencia }}</div>
-                                    </div>
-                                    <div class="my-3">
-                                        <label class="color-texto" for="correo-electronico" class="form-label">{{ tituloCorreoElectronico }}</label>
-                                        <input v-model="correoElectronico" type="text" class="form-control" id="correo-electronico" pattern="[A-Za-z0-9]+@[A-Za-z]+\.[A-Za-z]+">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <p class="fs-2 color-texto">{{ tituloDos }}</p>
-                                    <div class="row">
-                                        <div class="col my-3">
-                                            <label class="color-texto" for="contorno-de-cuello">{{ tituloCuello }}</label>
-                                        </div>
-                                        <div class="col my-3">
-                                            <input type="number" step="0.01" min="0" class="form-control" id="contorno-de-cuello">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col my-3">
-                                            <label class="color-texto" for="contorno-de-pecho" class="form-label">{{ tituloPecho }}</label>
-                                        </div>
-                                        <div class="col my-3">
-                                            <input type="number" step="0.01" min="0" class="form-control" id="contorno-de-pecho">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col my-3">
-                                            <label class="color-texto" for="contorno-de-cintura" class="form-label">{{ tituloCintura }}</label>
-                                        </div>
-                                        <div class="col my-3">
-                                            <input type="number" step="0.01" min="0" class="form-control" id="contorno-de-cintura">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <nav-bar></nav-bar>
+        <datos-de-contacto></datos-de-contacto>
+        <talles v-show="true"></talles>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="pasoUno.js"></script>
+
+    <script src="./botonera/botonPaso.js"></script>
+    <script src="./talles/talles.js"></script>
+    <script src="./datosDeContacto/datosDeContacto.js"></script>
+    <script src="./input/inputHorizontal.js"></script>
+    <script src="./input/inputVertical.js"></script>
+    <script src="./navbar/navbar.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
