@@ -7,8 +7,11 @@
     --color-texto-secundario: #FCDEC0;
 }
 
+html {
+    background-color: var(--color-terciario);
+}
 body {
-    background-color: var(--color-primario);
+    background-color: var(--color-terciario);
 }
 
 .fondo-navbar {

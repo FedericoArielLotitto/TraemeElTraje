@@ -5,7 +5,7 @@ Vue.component('talles', {
         }
     },
     template: `
-    <div class="row justify-content-center">
+    <div class="row g-0 justify-content-center">
         <div class="col fondo">
             <div id="card-pedido" class="card color-borde m-5 fondo-card">
                 <div class="card-body fondo-card">

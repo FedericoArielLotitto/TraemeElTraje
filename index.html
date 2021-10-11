@@ -15,9 +15,10 @@
 
 <body>
     <div id="app">
-        <nav-bar></nav-bar>
-        <datos-de-contacto></datos-de-contacto>
-        <talles v-show="true"></talles>
+        <nav-bar @volver-a-home="volverALaHome()" v-on:mostrar-pedidos="ocultarTodoYMostrarPedidos()"></nav-bar>
+        <datos-de-contacto @mostrar-talles="mostrarPasoDeTalles()" v-show="datosDeContactoVisibles"></datos-de-contacto>
+        <talles v-show="tallesVisibles"></talles>
+        <pedidos v-show="pedidosVisibles"></pedidos>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -26,6 +27,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+
+    <script src="./service/PedidoService.js"></script>
+
+    <script src="./pedidos/misPedidos.js"></script>
     <script src="./botonera/botonPaso.js"></script>
     <script src="./talles/talles.js"></script>
     <script src="./datosDeContacto/datosDeContacto.js"></script>

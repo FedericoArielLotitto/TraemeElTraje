@@ -4,12 +4,16 @@ Vue.component('datosDeContacto', {
             titulo: 'Datos de contacto'
         }
     },
+    methods: {
+        mostrarTalles() {
+            this.$emit('mostrar-talles');
+        }
+    },
     template: `
-    <div class="row justify-content-center">
+    <div class="row g-0 justify-content-center">
         <div class="col fondo">
-            <div id="card-pedido" class="card color-borde m-5 p-5 fondo-card">
+            <div id="card-pedido" class="card color-borde m-5 fondo-card">
                 <div class="card-body fondo-card">
-                    <form action="POST">
                         <div class="row">
                             <div class="col">
                                 <p class="fs-2 mx-3 color-texto">{{ titulo }}</p>
@@ -19,8 +23,7 @@ Vue.component('datosDeContacto', {
                                 <input-vertical concepto="Correo Electrónico" dato="correoElectronico"></input-vertical>
                             </div>
                         </div>
-                        <boton-paso nombre="Continuar"></boton-paso>
-                    </form>
+                        <boton-paso nombre="Continuar" @mostrar-talles="mostrarTalles()"></boton-paso>
                 </div>
             </div>
         </div>

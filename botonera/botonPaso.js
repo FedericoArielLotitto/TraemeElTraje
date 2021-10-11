@@ -1,9 +1,14 @@
 Vue.component('boton-paso', {
     props: ['nombre'],
+    methods: {
+        mostrarPasoDeIngresoDeTalles: function () {
+            this.$emit('mostrar-talles');
+        }
+    },
     template: `
-    <div class="row p-2">
+    <div class="row">
         <div class="col text-center">
-            <button type="button" class="btn btn-success">
+            <button @click="mostrarPasoDeIngresoDeTalles()" type="button" class="btn btn-success">
                 {{ this.nombre }}
             </button>
         </div>
